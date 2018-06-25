@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 
 import am.ith.app.R;
 import am.ith.app.activity.YouTubePlayerActivity;
-import am.ith.app.fragment.YoutubePlayerFragment;
+
 import am.ith.app.web_serviece.model.AppResponse;
 
 public class VideoGalleryRecycleViewAdapter extends RecyclerView.Adapter<VideoGalleryRecycleViewAdapter.VideoViewHolder> {

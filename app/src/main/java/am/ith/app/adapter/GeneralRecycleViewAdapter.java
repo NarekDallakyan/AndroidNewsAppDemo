@@ -68,7 +68,7 @@ public class GeneralRecycleViewAdapter extends RecyclerView.Adapter<GeneralRecyc
                 }
             }
         }
-
+        //convert date
         Date date = new Date(list.getMetadata().get(position).getDate());
         holder.category.setText(list.getMetadata().get(position).getCategory());
         holder.title.setText(list.getMetadata().get(position).getTitle());
@@ -98,11 +98,10 @@ public class GeneralRecycleViewAdapter extends RecyclerView.Adapter<GeneralRecyc
             public void onClick(View view) {
                 engine_singleton = Engine_Singleton.getInstance();
                 long myPosition = position;
-                int count=0;
                 Model model = new Model(myPosition, "true");
-                Toast.makeText(context, ""+count, Toast.LENGTH_SHORT).show();
 
-                    engine_singleton.getServices(context).save(model);
+                 //save recycle Item position in DB
+                engine_singleton.getServices(context).save(model);
 
                 Intent intent = new Intent(view.getContext(), DetailsActivity.class);
                 Engine_Singleton.getInstance().setMetadata(list.getMetadata().get(position));

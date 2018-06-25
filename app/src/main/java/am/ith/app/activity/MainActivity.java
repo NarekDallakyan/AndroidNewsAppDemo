@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<AppResponse> call, retrofit2.Response<AppResponse> response) {
                 if (response.body() != null) {
                     list= response.body();
-
-                    Toast.makeText(MainActivity.this, "" + list.getMetadata().size(), Toast.LENGTH_SHORT).show();
                     gridLayoutManager = new GridLayoutManager(MainActivity.this, 1);
                     LayoutAnimationController animationController= AnimationUtils.loadLayoutAnimation(MainActivity.this,R.anim.layout_animation_fall_down);
                     recyclerView.setLayoutAnimation(animationController);

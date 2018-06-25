@@ -37,6 +37,8 @@ public class Services extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + DB_TABLE);
         this.onCreate(db);
     }
+
+    //save data in DB
     public void save(Model model) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -46,6 +48,7 @@ public class Services extends SQLiteOpenHelper {
         db.close();
 
     }
+    //get All Data Array in DB
     public List<Model> getAllinform(String filter) {
         SQLiteDatabase db = getWritableDatabase();
         String query = "";

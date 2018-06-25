@@ -11,11 +11,11 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 import am.ith.app.R;
+import am.ith.app.db_engine.Constants;
 
 public class YouTubePlayerActivity extends YouTubeBaseActivity implements
         YouTubePlayer.OnInitializedListener {
 
-    public static final String API_KEY = "AIzaSyDL45Up3GHsNUnhrLnc_9-_y-wtKzb-mwQ";
     public static String VIDEO_ID = "";
 
     @Override
@@ -25,7 +25,7 @@ public class YouTubePlayerActivity extends YouTubeBaseActivity implements
         Intent intent = getIntent();
         VIDEO_ID = intent.getStringExtra("youtubeID");
         YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtubeplayerview);
-        youTubePlayerView.initialize(API_KEY, this);
+        youTubePlayerView.initialize(Constants.API_KEY, this);
     }
 
     @Override

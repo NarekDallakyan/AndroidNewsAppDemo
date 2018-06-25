@@ -48,10 +48,8 @@ public class PhotoGalleryFullScreenFragment extends Fragment {
         view= inflater.inflate(R.layout.fragment_gallery_full_screen, container, false);
         context=getContext();
         findView();
-        Animation xmlAnimationSample;
-        xmlAnimationSample = AnimationUtils.loadAnimation(context,R.anim.slide_out_down);
-        fullScreenImage.startAnimation(xmlAnimationSample);
-        Toast.makeText(context, fullScreenImageUrl, Toast.LENGTH_SHORT).show();
+        fullScreenImageAnimation(fullScreenImage);
+
         if (fullScreenImageUrl.length()>0) {
             setImageWithGilde(fullScreenImageUrl);
         }else {
@@ -67,6 +65,11 @@ public class PhotoGalleryFullScreenFragment extends Fragment {
                 .with(context)
                 .load(model_Url)
                 .into(fullScreenImage);
+    }
+    private void fullScreenImageAnimation(View view){
+        Animation xmlAnimationSample;
+        xmlAnimationSample = AnimationUtils.loadAnimation(context,R.anim.slide_out_down);
+        view.startAnimation(xmlAnimationSample);
     }
 
 }
