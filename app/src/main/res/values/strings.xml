@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- activity_details -->
+    <string name="relativeID">RelativeLayoutRecycle</string>
+    <string name="detailsScreenImageID">detailsScreenImageID</string>
+    <string name="progressBarDetailsScreenID">progressBarDetailsScreenID</string>
+    <string name="categoryDetailsScreenTxtID">categoryDetailsScreenTxtID</string>
+    <string name="titleDetailsScreenTxtID">titleDetailsScreenTxtID</string>
+    <string name="dateDetailsScreenTxtID">dateDetailsScreenTxtID</string>
+    <string name="bobyDetailsScreenTxtID">bobyDetailsScreenTxtID</string>
+    <string name="photoGalleryID">photoGalleryID</string>
+    <string name="videoGalleryID">videoGalleryID</string>
+    <string name="main_Container">main_Container</string>
+
+
+
+</resources>
